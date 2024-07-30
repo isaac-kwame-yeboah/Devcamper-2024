@@ -1,0 +1,5 @@
+ # Dont send the folowing to Github 
+node_modules 
+logs
+.env
+

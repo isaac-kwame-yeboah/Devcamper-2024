@@ -1,0 +1,11 @@
+      /* Backend APi Guide */
+1. Initialize a Git Repository
+   command =>  git init
+               git add. 
+               git commit -m "Initial Express setup" 
+            
+2. Create a Git Repository @ Github 
+   git remote add origin https://github.com/isaac-kwame-yeboah/Devcamper.git (copy && paste in terminal)
+   git push -u origin main (copy && paste in terminal) 
+
+3. 
