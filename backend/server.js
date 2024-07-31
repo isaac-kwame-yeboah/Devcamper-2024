@@ -25,8 +25,14 @@ import bootcampRoute from "./routes/bootcamps.js";
 // Bring in connectDB // 
 import connectDB from "./config/db.js";
 
+
+
 // Initialize express app //
 const app = express();   
+
+// Form Body Parser Middleware //
+app.use(express.json());  // send raw json //
+app.use(express.urlencoded({ extended:true }));  // URL encoded //
 
 // Use Logger Middleware //
 // app.use(logger);

@@ -1,6 +1,7 @@
                  /* Bootcamps Controllers */  
 
-
+// Bring in Bootcamp Model // 
+import Bootcamp from "../models/Bootcamp.js";
 
 
 
@@ -26,8 +27,20 @@ const getBootcamp = (req, res) => {
               // @desc    Create Bootcamp // 
               // @route   POST Request to /api/v1/bootcamps //
               // @access  Private //
-const createBootcamp = (req, res) => {
-           res.status(200).json({success: true, msg:`Create bootcamp `})
+const createBootcamp = async (req, res) => { 
+      try {
+        const bootcamp = await Bootcamp.create(req.body); 
+
+        res.status(201).json({
+            success: true,
+            data:bootcamp
+           })
+      } catch (error) {
+         res.status(400).json({
+            success: false
+         })
+      }
+      
 }
 
 
